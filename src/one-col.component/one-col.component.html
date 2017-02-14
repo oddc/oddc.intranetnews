@@ -1,0 +1,31 @@
+<od-widget widget-title="Interne News" icon="ressources/images/icon.png" template="tpl-big-header-ignore-titlebar">
+    <od-widget-header nospacing>
+        <div class="news-img-big" ng-click="oneColController.openNewsArticle(oneColController.lastNews[0]);">
+            <span class="show-arrow icon-widget-forward"></span>
+            <div class="big-headline">
+                <h1>{{ oneColController.lastNews[0].title | odTruncate:75 }}</h1>
+                <div class="news-teaser" ng-bind-html="oneColController.lastNews[0].content | odTruncate:115"></div>
+            </div>
+            <div class="img-inner" style="background:url({{ oneColController.lastNews[0].image }}) center center no-repeat;"></div>
+        </div>
+
+        <div class="news-img-small" ng-click="oneColController.openNewsArticle(oneColController.lastNews[1]);">
+            <span class="show-arrow icon-widget-forward"></span>
+            <div class="big-headline">
+                <h3>{{ oneColController.lastNews[1].title | odTruncate:75 }}</h3>
+            </div>
+            <div class="img-inner" style="background:url({{ oneColController.lastNews[1].image }}) center center no-repeat;"></div>
+        </div>
+
+        <div class="news-img-small" ng-click="oneColController.openNewsArticle(oneColController.lastNews[2]);">
+            <span class="show-arrow icon-widget-forward"></span>
+            <div class="big-headline">
+                <h3>{{ oneColController.lastNews[2].title | odTruncate:75 }}</h3>
+            </div>
+            <div class="img-inner" style="background:url({{ oneColController.lastNews[2].image }}) center center no-repeat;"></div>
+        </div>
+
+    </od-widget-header>
+    <od-widget-content nospacing>
+    </od-widget-content>
+</od-widget>

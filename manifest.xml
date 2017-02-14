@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="oddc.intranetnews" builder="2.3.1">
+    <information>
+        <name lang="de-DE">Interne-News</name>
+        <version>1.0.0</version>
+        <author>
+            <company>opta data Gruppe</company>
+            <telephone>0201 31960</telephone>
+            <fax>0201 3196222</fax>
+            <email>service@optadata-gruppe.de</email>
+            <web>http://www.optadata-gruppe.de</web>
+        </author>
+        <developer>
+            <name>Dennis Lehmann</name>
+            <email>d.lehmann@optadata-gruppe.de</email>
+        </developer>
+        <summary lang="de-DE">
+            <image>/ressources/images/small.jpg</image>
+            <text type="textile">
+                Die neusten Nachrichten rund um Ihr Unternehmen werden Ihnen in diesem Widget angezeigt.
+            </text>
+        </summary>
+        <description lang="de-DE">
+            <image>/ressources/images/big.jpg</image>
+            <text type="textile">
+                Das Widget für Interne News zeigt Ihnen auf Ihrem Dashboard die aktuellen Unternehmensnews aus dem eigenen Betrieb an. Nutzer mit entsprechender Berechtigung können Nachrichten über die News-Oberfläche einpflegen.
+            </text>
+        </description>
+        <tags>kostenlos,opta data</tags>
+        <appearance>
+            <text-appearance>light</text-appearance>
+            <main-color>#1C2336</main-color>
+        </appearance>
+        <links>
+            <link environment="DEV"  title="Zur News-Übersicht" link="//odcweb1.optadata.com/dev/#/app/intranet-news" />
+            <link environment="PROD" title="Zur News-Übersicht" link="//portal.optadata-one.de/#/app/intranet-news" />
+        </links>
+    </information>
+    <ressources>
+        <templates lang="de-DE">
+            <template cols="1" rows="1" markup="/ressources/app.1col.html">
+                <scripts>
+                    <script>/src/app.js</script>
+                    <script>/src/shared/news.service/news.service.js</script>
+                    <script>/src/one-col.component/one-col.component.js</script>
+                </scripts>
+                <styles>
+                    <style>/src/one-col.component/one-col.component.css</style>
+                </styles>
+            </template>
+            <template cols="2" rows="1" markup="/ressources/app.2col.html">
+                <scripts>
+                    <script>/src/app.js</script>
+                    <script>/src/shared/news.service/news.service.js</script>
+                    <script>/src/two-col.component/two-col.component.js</script>
+                </scripts>
+                <styles>
+                    <style>/src/two-col.component/two-col.component.css</style>
+                </styles>
+            </template>
+        </templates>
+        <services>
+            <service environment="DEV" type="restful" name="getNews" url="http://crm-test.optadata.com:8080/odone.widgetservices/news" method="GET"></service>
+            <service environment="PROD" type="restful" name="getNews" url="https://widgetservice.optadata-one.de/news" method="GET"></service>
+        </services>
+    </ressources>
+</widget>
+
