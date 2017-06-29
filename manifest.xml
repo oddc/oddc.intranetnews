@@ -2,7 +2,7 @@
 <widget id="oddc.intranetnews" builder="2.3.2">
     <information>
         <name lang="de-DE">Interne-News</name>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -34,6 +34,7 @@
         <links>
             <link environment="DEV"  title="Zur News-Übersicht" link="//odcweb1.optadata.com/dev/#/app/intranet-news" />
             <link environment="PROD" title="Zur News-Übersicht" link="//portal.optadata-one.de/#/app/intranet-news" />
+            <link environment="TEST" title="Zur News-Übersicht" link="//portal.test.optadata-one.de/#/app/intranet-news" />
         </links>
     </information>
     <ressources>
@@ -62,6 +63,7 @@
         <services>
             <service environment="DEV" type="restful" name="getNews" url="http://crm-test.optadata.com:8080/odone.widgetservices/news" method="GET"></service>
             <service environment="PROD" type="restful" name="getNews" url="https://widgetservice.optadata-one.de/news" method="GET"></service>
+            <service environment="TEST" type="restful" name="getNews" url="https://widgetservice.test.optadata-one.de/news" method="GET"></service>
         </services>
     </ressources>
 </widget>
