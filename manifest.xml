@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget id="oddc.intranetnews" builder="2.3.2">
+<widget id="oddc.intranetnews" builder="3.0.0" icon="icon.png">
     <information>
         <name lang="de-DE">Interne-News</name>
-        <version>1.0.2</version>
+        <version>1.0.4</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -21,7 +21,10 @@
             </text>
         </summary>
         <description lang="de-DE">
-            <image>/ressources/images/big.jpg</image>
+            <media>
+                <image>/ressources/images/small.jpg</image>
+                <image>/ressources/images/big.jpg</image>
+            </media>
             <text type="textile">
                 Das Widget für Interne News zeigt Ihnen auf Ihrem Dashboard die aktuellen Unternehmensnews aus dem eigenen Betrieb an. Nutzer mit entsprechender Berechtigung können Nachrichten über die News-Oberfläche einpflegen.
             </text>
@@ -31,6 +34,7 @@
             <text-appearance>light</text-appearance>
             <main-color>#1C2336</main-color>
         </appearance>
+        <productgroup>odone.interne.widgets</productgroup>
         <links>
             <link environment="DEV"  title="Zur News-Übersicht" link="//odcweb1.optadata.com/dev/#/app/intranet-news" />
             <link environment="PROD" title="Zur News-Übersicht" link="//portal.optadata-one.de/#/app/intranet-news" />
