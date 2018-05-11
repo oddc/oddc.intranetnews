@@ -107,3 +107,8 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     right: 15px;
     opacity: 1;
 }
+
+.no-news {
+    margin-top: 50px;
+    padding: 20px;
+}

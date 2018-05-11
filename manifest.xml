@@ -2,7 +2,8 @@
 <widget id="oddc.intranetnews" builder="3.0.0" icon="icon.png">
     <information>
         <name lang="de-DE">Interne-News</name>
-        <version>1.0.4</version>
+		<shortname lang="de-DE">I-News</shortname>
+        <version>1.0.7</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -40,6 +41,8 @@
             <link environment="PROD" title="Zur News-Übersicht" link="//portal.optadata-one.de/#/app/intranet-news" />
             <link environment="TEST" title="Zur News-Übersicht" link="//portal.test.optadata-one.de/#/app/intranet-news" />
         </links>
+		<buylink>http://buylink.test</buylink>
+		<morelink>http://morelink.test</morelink>
     </information>
     <ressources>
         <templates lang="de-DE">
