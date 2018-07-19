@@ -13,7 +13,7 @@
                 <div class="img-inner" style="background:url({{ oneColController.lastNews[0].image }}) center center no-repeat;"></div>
             </div>
 
-            <div class="news-img-small" ng-click="oneColController.openNewsArticle(oneColController.lastNews[1]);">
+            <div class="news-img-small" ng-click="oneColController.openNewsArticle(oneColController.lastNews[1]);" ng-if="oneColController.lastNews[1] !== undefined">
                 <span class="show-arrow icon-widget-forward"></span>
                 <div class="big-headline">
                     <h3>{{ oneColController.lastNews[1].title | odTruncate:75 }}</h3>
@@ -21,7 +21,7 @@
                 <div class="img-inner" style="background:url({{ oneColController.lastNews[1].image }}) center center no-repeat;"></div>
             </div>
 
-            <div class="news-img-small" ng-click="oneColController.openNewsArticle(oneColController.lastNews[2]);">
+            <div class="news-img-small" ng-click="oneColController.openNewsArticle(oneColController.lastNews[2]);" ng-if="oneColController.lastNews[2] !== undefined">
                 <span class="show-arrow icon-widget-forward"></span>
                 <div class="big-headline">
                     <h3>{{ oneColController.lastNews[2].title | odTruncate:75 }}</h3>
@@ -29,7 +29,6 @@
                 <div class="img-inner" style="background:url({{ oneColController.lastNews[2].image }}) center center no-repeat;"></div>
             </div>
         </div>
-
     </od-widget-header>
     <od-widget-content nospacing>
     </od-widget-content>

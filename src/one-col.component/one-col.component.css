@@ -1,3 +1,9 @@
+
+.panel-heading-content {
+    background-color: #000000!important;
+}
+
+
 body .tpl-big-header-ignore-titlebar .panel-heading {
     background: rgba(0, 0, 0, 0.5) !important;
 }
