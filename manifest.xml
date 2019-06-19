@@ -3,7 +3,7 @@
     <information>
         <name lang="de-DE">Interne-News</name>
 		<shortname lang="de-DE">I-News</shortname>
-        <version>1.0.9</version>
+        <version>1.0.10</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -68,7 +68,7 @@
             </template>
         </templates>
         <services>
-            <service environment="DEV" type="restful" name="getNews" url="http://crm-test.optadata.com:8080/odone.widgetservices/news" method="GET"></service>
+            <service environment="DEV" type="restful" name="getNews" url="http://wildfly.optadata.com:8080/odone.widgetservices/news" method="GET"></service>
             <service environment="PROD" type="restful" name="getNews" url="https://widgetservice.optadata-one.de/news" method="GET"></service>
             <service environment="TEST" type="restful" name="getNews" url="https://widgetservice.test.optadata-one.de/news" method="GET"></service>
         </services>
