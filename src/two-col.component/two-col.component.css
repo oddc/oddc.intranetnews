@@ -1,15 +1,49 @@
+
+
+.panel-heading-content {
+    background-color: #000000!important;
+}
+
+
+.nano {
+    height: 442px!important;
+}
+
+.switch {
+    position: fixed;
+    top: 13px;
+    right: 30px;
+    color: white;
+    font-size: 22px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+
 body .tpl-big-header-ignore-titlebar .panel-heading {
     background: rgba(0, 0, 0, 0.5) !important;
 }
 
-.news-img-big {
-    height: 442px;
+.news-img-big, .news-img-small {
     position: relative;
     overflow: hidden;
     cursor: pointer !important;
     background-color:#000;
     transition: all ease .3s;
     -webkit-transition: all ease .3s;
+}
+
+
+
+.news-img-big {
+    height: 360px;
+}
+
+
+.news-img-small {
+    height: 81px;
+    width: 25%;
+    float: left;
 }
 
 .img-inner {
@@ -20,7 +54,7 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     background-size: cover !important;
 }
 
-.news-img-big:hover .img-inner, .news-thumb li:hover .img-inner {
+.news-img-big:hover .img-inner, .news-img-small:hover .img-inner {
     transform: scale(1.2);
     opacity: 0.5;
 }
@@ -30,44 +64,10 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     max-width: 430px;
 }
 
-.news-thumb ul {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #000;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.news-thumb li {
-    height: 80px;
-    display:inline-block;
-    background: #000;
-    position: relative;
-    cursor: pointer !important;
-    overflow: hidden;
-}
-
-.news-thumb li h4 {
-    color: #fff;
-    font-size: 12px;
-    text-align: left;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
-    text-shadow: 0 0px 2px rgba(0, 0, 0, 0.47);
-    padding: 20px 15px 15px 15px;
-    margin:0;
-    z-index: 99;
-}
 
 .big-headline {
     position: absolute;
-    bottom: 81px;
+    bottom: 0px;
     width: 100%;
     padding: 15px;
     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
@@ -106,12 +106,12 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     top: 65px;
 }
 
-.news-thumb .show-arrow {
-    font-size: 10px;
+.news-img-small .show-arrow {
+    font-size: 15px;
     top: 10px;
 }
 
-.news-img-big:hover .show-arrow,  .news-thumb li:hover .show-arrow{
+.news-img-big:hover .show-arrow, .news-img-small:hover .show-arrow {
     right: 15px;
     opacity: 1;
 }

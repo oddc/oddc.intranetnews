@@ -3,7 +3,7 @@
     <information>
         <name lang="de-DE">Interne-News</name>
 		<shortname lang="de-DE">I-News</shortname>
-        <version>1.0.10</version>
+        <version>1.1.0</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -50,9 +50,11 @@
                 <scripts>
                     <script>/src/app.js</script>
                     <script>/src/shared/news.service/news.service.js</script>
+                    <script>/src/shared/news-list.component/news-list.component.js</script>
                     <script>/src/one-col.component/one-col.component.js</script>
                 </scripts>
                 <styles>
+                    <style>/src/shared/news-list.component/news-list.component.css</style>
                     <style>/src/one-col.component/one-col.component.css</style>
                 </styles>
             </template>
@@ -60,9 +62,11 @@
                 <scripts>
                     <script>/src/app.js</script>
                     <script>/src/shared/news.service/news.service.js</script>
+                    <script>/src/shared/news-list.component/news-list.component.js</script>
                     <script>/src/two-col.component/two-col.component.js</script>
                 </scripts>
                 <styles>
+                    <style>/src/shared/news-list.component/news-list.component.css</style>
                     <style>/src/two-col.component/two-col.component.css</style>
                 </styles>
             </template>

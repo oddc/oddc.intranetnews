@@ -1,0 +1,23 @@
+
+<div id="news-list">
+
+    <div class="news-list"
+         ng-repeat="news in ctrl.newsList"
+         ng-click="ctrl.openNewsArticle(news);"
+         ng-if="news !== undefined">
+
+        <span class="show-arrow icon-widget-forward"></span>
+
+        <div class="news-list-img">
+            <div class="img-inner" style="background: url({{ news.image }}) center center no-repeat;"></div>
+        </div>
+
+        <div class="news-list-content">
+            <h3>{{ news.title | odTruncate:75 }}</h3>
+            {{news.createdAt | odRelativeTime:'x'}}
+            <span class="badge">{{ news.category.value  | odTruncate:20:'...'}}</span>
+            <div style="margin-top: 5px;" ng-bind-html="news.content | odTruncate:115"></div>
+        </div>
+    </div>
+
+</div>

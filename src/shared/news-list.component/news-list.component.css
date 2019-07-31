@@ -1,0 +1,43 @@
+
+
+#news-list {
+    padding-top: 50px;
+}
+
+
+.news-list {
+    height: 120px;
+    width: 100%;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.news-list .img-inner:hover {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+
+.news-list:hover {
+    background-color: #151515;
+}
+
+
+.news-list-img {
+    display: block;
+    width: 127px;
+    height: 120px;
+    float: left;
+    overflow: hidden;
+}
+
+
+.news-list-content {
+    display: block;
+    width: auto;
+    height: 90px;
+    margin-left: 152px;
+    margin-top: 30px;
+}

@@ -4,31 +4,75 @@
         <div class="no-news" ng-if="twoColController.lastNews.length === 0">
             <div class="alert alert-warning" role="alert">Keine News vorhanden !!!</div>
         </div>
-        <div ng-if="twoColController.lastNews.length > 0">
 
-            <div class="news-img-big" ng-click="twoColController.openNewsArticle(twoColController.lastNews[0]);">
-                <span class="show-arrow icon-widget-forward"></span>
-                <div class="big-headline">
-                    <h1>{{ twoColController.lastNews[0].title | odTruncate:75 }}</h1>
-                    <div class="news-teaser" ng-bind-html="twoColController.lastNews[0].content | odTruncate:115"></div>
-                </div>
-                <div class="img-inner" style="background:url({{ twoColController.lastNews[0].image }}) center center no-repeat;"></div>
-            </div>
 
-            <div class="news-thumb">
-                <ul>
-                    <li class="col-xs-3" ng-repeat="current in twoColController.lastNews" ng-hide="$first" ng-click="twoColController.openNewsArticle(current);">
-                        <h4>{{ current.title | odTruncate:75 }}</h4>
+        <od-scrollbar>
+            <div ng-if="twoColController.lastNews.length > 0">
+
+                <span class="glyphicon glyphicon-list switch" ng-click="twoColController.switch()" ng-if="!twoColController.isList"></span>
+                <span class="glyphicon glyphicon-th-large switch" ng-click="twoColController.switch()" ng-if="twoColController.isList"></span>
+
+                <div ng-if="!twoColController.isList">
+
+                    <!--
+                    <div class="news-img-big" ng-click="twoColController.openNewsArticle(twoColController.lastNews[0]);">
                         <span class="show-arrow icon-widget-forward"></span>
-                        <div class="img-inner" style="background:url({{ current.image }}) center center no-repeat"></div>
-                    </li>
-                </ul>
-            </div>
+                        <div class="big-headline">
+                            <h1>{{ twoColController.lastNews[0].title | odTruncate:75 }}</h1>
+                            <div class="news-teaser" ng-bind-html="twoColController.lastNews[0].content | odTruncate:115"></div>
+                        </div>
+                        <div class="img-inner" style="background:url({{ twoColController.lastNews[0].image }}) center center no-repeat;"></div>
+                    </div>
 
-        </div>
+                    <div class="news-thumb">
+                        <ul>
+                            <li class="col-xs-3" ng-repeat="current in twoColController.lastNews" ng-hide="$first" ng-click="twoColController.openNewsArticle(current);">
+                                <h4>{{ current.title | odTruncate:75 }}</h4>
+                                <span class="show-arrow icon-widget-forward"></span>
+                                <div class="img-inner" style="background:url({{ current.image }}) center center no-repeat"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    -->
+
+
+                    <div class="news-img-big" ng-click="oneColController.openNewsArticle(oneColController.lastNews[0]);">
+                        <span class="show-arrow icon-widget-forward"></span>
+                        <div class="big-headline">
+                            <h1>{{ twoColController.lastNews[0].title | odTruncate:75 }}</h1>
+                            <div class="news-teaser">
+                                {{ twoColController.lastNews[0].createdAt | odRelativeTime:'x' }}
+                                <span class="badge">{{ twoColController.lastNews[0].category.value  | odTruncate:20:'...'}}</span>
+                                <div style="margin-top: 5px; margin-bottom: 5px;" ng-bind-html="twoColController.lastNews[0].content | odTruncate:115"></div>
+                                <div>12 Personen gefällt das | 7 Kommentare</div>
+                            </div>
+                        </div>
+                        <div class="img-inner" style="background:url({{ twoColController.lastNews[0].image }}) center center no-repeat;"></div>
+                    </div>
+
+
+                    <div class="news-img-small"
+                         ng-repeat="news in twoColController.lastNews track by $index"
+                         ng-click="twoColController.openNewsArticle(news);"
+                         ng-if="news !== undefined && $index > 0">
+
+                        <span class="show-arrow icon-widget-forward"></span>
+                        <div class="big-headline">
+                            <h3>{{ news.title | odTruncate:75 }}</h3>
+                        </div>
+                        <div class="img-inner" style="background:url({{ news.image }}) center center no-repeat;"></div>
+                    </div>
+
+                </div>
+                <div ng-if="twoColController.isList">
+
+                    <news-list news-list="twoColController.lastNews"></news-list>
+
+                </div>
+            </div>
+        </od-scrollbar>
 
     </od-widget-header>
-    <od-widget-content nospacing>
-
+    <od-widget-content>
     </od-widget-content>
 </od-widget>
