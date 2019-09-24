@@ -11,6 +11,7 @@
     float: left;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -40,4 +41,12 @@
     height: 90px;
     margin-left: 152px;
     margin-top: 30px;
+}
+
+.comment2 {
+    bottom: 60px!important;
+}
+
+.likes2 {
+    bottom: 40px!important;
 }

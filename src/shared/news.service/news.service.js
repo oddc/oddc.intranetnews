@@ -2,10 +2,12 @@
     'use strict';
 
     angular.module('widgetbuilder')
-        .factory('newsService', ['widgetServices', '$rootScope', '$q', function (widgetServices, $rootScope, $q) {
+        .factory('newsService', ['widgetServices', '$http', '$rootScope', '$q', function (widgetServices, $http, $rootScope, $q) {
 
             return {
-                getLastNews: getLastNews
+                getLastNews: getLastNews,
+                getNofComments: getNofComments,
+                getLikes: getLikes
             };
 
             /*
@@ -22,6 +24,39 @@
                 }, function error(response) {
                     return $q.reject(response);
                 });
+            }
+            
+            
+            function getNofComments(newsId) {
+                return $http.get('http://wildfly.optadata.com:8080/odone.widgetservices/news/comments/all/' + newsId)
+                    .then(function (response) {
+                        return response.data.comments;
+                    },
+                    function (error) {
+                        return $q.reject(error);
+                    });
+
+
+                /*
+                return widgetServices.callService('getComments', {id: newsId}).then(function success(response) {
+
+                   console.log('$$$', response);
+
+                }, function error(response) {
+                    return $q.reject(response);
+                });
+                */
+            }
+
+
+            function getLikes(newsId) {
+                return $http.get('http://wildfly.optadata.com:8080/odone.widgetservices/news/likes/' + newsId)
+                    .then(function (response) {
+                        return response.data.likes;
+                    },
+                    function (error) {
+                        return $q.reject(error);
+                    });
             }
 
 

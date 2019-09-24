@@ -12,6 +12,9 @@
             <div class="img-inner" style="background: url({{ news.image }}) center center no-repeat;"></div>
         </div>
 
+        <div class="likes2">{{news.likes}}</div>
+        <div class="comment2">{{news.nofComments}}</div>
+
         <div class="news-list-content">
             <h3>{{ news.title | odTruncate:75 }}</h3>
             {{news.createdAt | odRelativeTime:'x'}}

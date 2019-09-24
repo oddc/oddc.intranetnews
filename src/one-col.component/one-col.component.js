@@ -23,6 +23,18 @@
 
                 newsService.getLastNews(9999).then(function success(response) {
                     self.lastNews = response;
+
+                    angular.forEach(self.lastNews, function(obj) {
+                        newsService.getNofComments(obj.id).then(function (nofComments) {
+                            obj['nofComments'] = nofComments;
+                        });
+
+                        newsService.getLikes(obj.id).then(function (likes) {
+                            obj['likes'] = likes;
+                        });
+                    });
+
+                    console.log('###>', self.lastNews);
                 });
             }],
             controllerAs : 'oneColController'

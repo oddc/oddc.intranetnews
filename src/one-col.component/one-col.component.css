@@ -68,8 +68,8 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     bottom: -70px;
     opacity: 0;
     padding:0 15px 0 0;
-    max-width: 430px;
     z-index: 99;
+    width: calc(100% - 30px);
 }
 
 .news-img-big:hover .news-teaser {
@@ -134,4 +134,34 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     padding: 20px;
 }
 
+
+.likes, .comment, .likes2, .comment2 {
+    position: absolute;
+    right: 10px;
+    color: #ffffff;
+    z-index: 999999;
+    width: 100px;
+    height: 20px;
+    text-align: right;
+    padding-right: 30px;
+    line-height: 20px;
+}
+
+
+.likes, .likes2 {
+    bottom: 10px;
+    background: url("/ressources/images/like.svg") no-repeat;
+    background-size: 20px 20px;
+    background-position: right;
+    padding-top: 4px;
+}
+
+
+.comment, .comment2 {
+    bottom: 35px;
+    background: url("/ressources/images/comment.svg") no-repeat;
+    background-size: 20px 20px;
+    background-position: right;
+    padding-top: 0px;
+}
 

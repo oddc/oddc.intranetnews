@@ -18,7 +18,8 @@
                                 {{ oneColController.lastNews[0].createdAt | odRelativeTime:'x' }}
                                 <span class="badge">{{ oneColController.lastNews[0].category.value  | odTruncate:20:'...'}}</span>
                                 <div style="margin-top: 5px; margin-bottom: 5px;" ng-bind-html="oneColController.lastNews[0].content | odTruncate:115"></div>
-                                <div>12 Personen gefällt das | 7 Kommentare</div>
+                                <div class="likes">{{oneColController.lastNews[0].likes}}</div>
+                                <div class="comment">{{oneColController.lastNews[0].nofComments}}</div>
                             </div>
                         </div>
                         <div class="img-inner" style="background:url({{ oneColController.lastNews[0].image }}) center center no-repeat;"></div>
