@@ -33,8 +33,6 @@
                             obj['likes'] = likes;
                         });
                     });
-
-                    console.log('###>', self.lastNews);
                 });
             }],
             controllerAs : 'oneColController'
