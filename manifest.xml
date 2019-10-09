@@ -3,7 +3,7 @@
     <information>
         <name lang="de-DE">Interne-News</name>
 		<shortname lang="de-DE">I-News</shortname>
-        <version>1.2.3</version>
+        <version>1.2.4</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -43,6 +43,14 @@
         </links>
 		<buylink>http://buylink.test</buylink>
 		<morelink>http://morelink.test</morelink>
+        <tutorial>
+            <helptext lang="de-DE">
+                Dieses Widget zeigt die neuesten Neuigkeiten, die für Ihr Intranet hinterlegt sind. Als Administrator können Sie
+                neue Newsbeiträge verfassen, indem Sie über das User-Menü (ganz oben rechts in der Titelleiste von opta data one)
+                auf „News- und Dateiverwaltung“ klicken.
+            </helptext>
+            <image>/ressources/images/small.png</image>
+        </tutorial>
     </information>
     <ressources>
         <templates lang="de-DE">
