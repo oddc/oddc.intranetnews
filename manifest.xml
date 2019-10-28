@@ -3,7 +3,7 @@
     <information>
         <name lang="de-DE">Interne-News</name>
 		<shortname lang="de-DE">I-News</shortname>
-        <version>1.2.4</version>
+        <version>1.2.5</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 31960</telephone>
@@ -81,15 +81,15 @@
         </templates>
         <services>
             <service environment="DEV" type="restful" name="getNews" url="http://wildfly.optadata.com:8080/odone.widgetservices/news" method="GET"></service>
-            <service environment="DEV" type="restful" name="getComments" url="http://wildfly.optadata.com:8080/odone.widgetservices/news​/comments​/all​/{id}" method="GET"></service>
+            <service environment="DEV" type="restful" name="getComments" url="http://wildfly.optadata.com:8080/odone.widgetservices/news/comments/all/{id}" method="GET"></service>
             <service environment="DEV" type="restful" name="getLikes" url="http://wildfly.optadata.com:8080/odone.widgetservices/news/likes/{id}" method="GET"></service>
 
             <service environment="PROD" type="restful" name="getNews" url="https://widgetservice.optadata-one.de/news" method="GET"></service>
-            <service environment="PROD" type="restful" name="getComments" url="https://widgetservice.optadata-one.de/news​/comments​/all​/{id}" method="GET"></service>
+            <service environment="PROD" type="restful" name="getComments" url="https://widgetservice.optadata-one.de/news​/comments/all/{id}" method="GET"></service>
             <service environment="PROD" type="restful" name="getLikes" url="https://widgetservice.optadata-one.de/news/likes/{id}" method="GET"></service>
 
             <service environment="TEST" type="restful" name="getNews" url="https://widgetservice.test.optadata-one.de/news" method="GET"></service>
-            <service environment="TEST" type="restful" name="getComments" url="https://widgetservice.test.optadata-one.de/news​/comments​/all​/{id}" method="GET"></service>
+            <service environment="TEST" type="restful" name="getComments" url="https://widgetservice.test.optadata-one.de/news/comments/all/{id}" method="GET"></service>
             <service environment="TEST" type="restful" name="getLikes" url="https://widgetservice.test.optadata-one.de/news/likes/{id}" method="GET"></service>
         </services>
     </ressources>

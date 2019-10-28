@@ -28,35 +28,22 @@
             
             
             function getNofComments(newsId) {
-                return $http.get('http://wildfly.optadata.com:8080/odone.widgetservices/news/comments/all/' + newsId)
-                    .then(function (response) {
-                        return response.data.comments;
-                    },
-                    function (error) {
-                        return $q.reject(error);
-                    });
-
-
-                /*
                 return widgetServices.callService('getComments', {id: newsId}).then(function success(response) {
-
-                   console.log('$$$', response);
+                    return response.comments;
 
                 }, function error(response) {
                     return $q.reject(response);
                 });
-                */
             }
 
 
             function getLikes(newsId) {
-                return $http.get('http://wildfly.optadata.com:8080/odone.widgetservices/news/likes/' + newsId)
-                    .then(function (response) {
-                        return response.data.likes;
-                    },
-                    function (error) {
-                        return $q.reject(error);
-                    });
+                return widgetServices.callService('getLikes', {id: newsId}).then(function success(response) {
+                    return response.likes;
+
+                }, function error(response) {
+                    return $q.reject(response);
+                });
             }
 
 
