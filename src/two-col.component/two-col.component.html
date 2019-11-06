@@ -9,8 +9,8 @@
         <od-scrollbar>
             <div ng-if="twoColController.lastNews.length > 0">
 
-                <span class="glyphicon glyphicon-list switch" ng-click="twoColController.switch()" ng-if="!twoColController.isList"></span>
-                <span class="glyphicon glyphicon-th-large switch" ng-click="twoColController.switch()" ng-if="twoColController.isList"></span>
+                <span class="icon icon-list switch" ng-click="twoColController.switch()" ng-if="!twoColController.isList"></span>
+                <span class="icon icon-align-justify switch" ng-click="twoColController.switch()" ng-if="twoColController.isList"></span>
 
                 <div ng-if="!twoColController.isList">
 
@@ -43,7 +43,7 @@
                             <div class="news-teaser">
                                 {{ twoColController.lastNews[0].createdAt | odRelativeTime:'x' }}
                                 <span class="badge">{{ twoColController.lastNews[0].category.value  | odTruncate:20:'...'}}</span>
-                                <div style="margin-top: 5px; margin-bottom: 5px;" ng-bind-html="twoColController.lastNews[0].content | odTruncate:115"></div>
+                                <div style="margin-top: 5px; margin-bottom: 5px;" ng-bind-html="twoColController.lastNews[0].content | odTruncate:90"></div>
                                 <div class="likes">{{twoColController.lastNews[0].likes}}</div>
                                 <div class="comment">{{twoColController.lastNews[0].nofComments}}</div>
                             </div>

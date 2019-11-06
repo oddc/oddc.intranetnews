@@ -67,7 +67,7 @@ body .tpl-big-header-ignore-titlebar .panel-heading {
     position: absolute;
     bottom: -70px;
     opacity: 0;
-    padding:0 15px 0 0;
+    padding:0 50px 0 0;
     z-index: 99;
     width: calc(100% - 30px);
 }
